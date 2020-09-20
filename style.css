@@ -29,48 +29,58 @@ p{
 }
 .section1{
     margin: auto;
-    text-align: center;
     width: 70%;
     color: #fff;
-    
-}
-.container2{
-    width: 100%;
-}
-.section2{
-    font-size: 26px;
-    text-align: center;
-    background-color: #e4e2e2;
-    padding: 1em;
-    
-}
-.contentdivide{
-    margin: 5px;
-    padding: 5px;
-    text-align: justify;
+    justify-content: center;
+    padding: 10px;
 }
 .btn{
     background-color: #222;
     align-self: center;
     border: 2px solid;
-    display: inline-block;
     position: relative;
     border: 2px solid;
     background-color: rgb(22, 22, 22);
     color: #fff;
     padding: 5px;
     height: 70px;
-    margin: 0.5em;
+    margin: auto;
+    width: 200px;
 }
 .btntext{
-    position: relative;
-    align-self: center;
+    text-align: center;
     display: inline-block;
-    margin: 0.7em;
+    width: 100%;
 }
 .btn:hover{
     background-color: #fff;
     color: #222;
+}
+.container2{
+    width: 100%;
+}
+.section2{
+    font-size: 26px;
+    background-color: #e4e2e2;
+    padding: 1em; 
+    width: auto;  
+}
+.col{ 
+    display: flex;
+    width: 100%;
+}
+.contentdivide{
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex: 50%;
+    flex-wrap: wrap;
+}
+@media screen and (max-width:800px){
+    .contentdivide{
+        flex:100%;
+        max-width: 100%;
+    }
 }
 .column{
     display: flex;
@@ -78,18 +88,27 @@ p{
     padding: 5px;
     margin: auto;
 }
-.container3{
-    display: block;
+.container{
+    display: flex;
+}
+.row{
     background-color: #333;
     padding: 2em 1em 1em;
+    display: flex;
+    flex-wrap: wrap;
 }
-.card{
-    width: 30%;
-    height: 100%;
-    margin: 5px;
-    display: inline-block;
+.col-sm-4{   
+    margin: auto;    
     background-color: #fff;
-    overflow: hidden;
+    position: relative;    
+    flex: 30%;
+    max-width: 30%;
+}
+@media screen and (max-width:800px){
+    .col-sm-4{
+        flex: 100%;
+        max-width: 100%;
+    }
 }
 .cardcontent{
     width: 80%;
@@ -104,21 +123,6 @@ p{
     display: block;
     background-color: #fff;
 }
-ul{
-    list-style: none;
-    margin: 0; 
-    padding: 0;
-    display: block; 
-    margin-block-start: 1em; 
-    margin-block-end: 1em;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 40px;
-}
-li{
-    display: inline-block;
-    margin-block-end: 1em;
-}
 .container5{
     display: flex;
     width: 100%;
@@ -126,14 +130,14 @@ li{
 }
 .divideleft{
     background-color: rgb(106, 170, 255);
-    width: 50%;
+    width: 100%;
     position: relative;
     padding: 10px;
     color: #fff;
 }
 .divideright{
     background-color: rgb(15, 24, 36);
-    width: 50%;
+    width: 100%;
     position: relative;
    padding: 10px;
    color: #fff;
